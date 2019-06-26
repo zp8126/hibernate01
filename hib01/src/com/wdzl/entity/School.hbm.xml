@@ -4,6 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="com.wdzl.entity.School" table="school">
-		<id name="scid" column="scid"></id>
+		<!-- id表示主键 -->
+		<id name="scid" column="scid">
+			<!-- 主键生成策略，native表示数据库端本地生成策略，比如标识列 -->
+			<generator class="native"></generator>
+		</id>
+		<!-- 属性和列名对应关系，不过这里属性和列表定义相同了，可以不同的 -->
+		<property name="scname" column="scname"></property>
+		<property name="address" column="address"></property>
 	</class>
 </hibernate-mapping>

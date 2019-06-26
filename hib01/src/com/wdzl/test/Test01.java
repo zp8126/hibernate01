@@ -24,6 +24,8 @@ public class Test01 {
 			
 			//关闭会话
 			session.close();
+			//关闭工厂 释放资源
+			factory.close();
 		} catch (HibernateException e) { 
 			e.printStackTrace();
 		}
